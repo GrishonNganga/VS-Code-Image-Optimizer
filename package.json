@@ -28,6 +28,21 @@
           "title": "Optimize"
         }
       ]
+    },
+    "configuration": {
+      "title": "Image Optimizer",
+      "properties": {
+        "image-optimizer.quality": {
+          "type": "number",
+          "default": 80,
+          "description": "Set the quality of the image"
+        },
+        "image-optimizer.scale": {
+          "type": "number",
+          "default": 0.5,
+          "description": "Set the scale down ratio"
+        }
+      }
     }
   },
   "scripts": {

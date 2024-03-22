@@ -8,9 +8,9 @@ export const compress = async (file: string, config?: { scale?: number, quality?
     const scale = config?.scale || 0.5
     const quality = config?.quality || 99
     const resize = config?.resize || 0.3
+
     await Jimp.read(file)
         .then(fileRes => {
-            console.log("FILE", fileRes)
             const updated = fileRes
                 .resize(fileRes.bitmap.width * resize, fileRes.bitmap.height * resize)
                 .scale(scale)
