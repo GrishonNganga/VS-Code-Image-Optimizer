@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	let optimizeMenu = vscode.commands.registerCommand('image-optimizer.optimize', async (resource: vscode.Uri) => {
 		vscode.window.showInformationMessage('Operation in progress');
-		const compressedFile = await compress(resource.fsPath)
+		await compress(resource.fsPath)
 
 		vscode.window.showInformationMessage('File optimized successfully');
 
