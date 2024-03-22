@@ -4,6 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "GrishonNganga",
+  "repository": "https://github.com/GrishonNganga/VS-Code-Image-Optimizer",
   "engines": {
     "vscode": "^1.87.0"
   },
