@@ -5,4 +5,4 @@ Image Optimizer let's you easily compress your image assets straight in VS Code.
 Using online tools to compress huge image files to use in your web applications is time consuming. Easily compress the image assets straight from VS Code.
 
 ### Example
-https://github.com/GrishonNganga/VS-Code-Image-Optimizer/assets/52824774/ebb6a78d-66c7-43bd-b8c3-97fed1e4d830
+<video src="https://github.com/GrishonNganga/VS-Code-Image-Optimizer/assets/52824774/96bbed01-6f93-4c7c-b816-dcb18c2cc00a" width="320" height="240" controls></video>
