@@ -2,7 +2,7 @@
   "name": "image-optimizer",
   "displayName": "Image Optimizer",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "GrishonNganga",
   "repository": "https://github.com/GrishonNganga/VS-Code-Image-Optimizer",
   "engines": {
@@ -16,20 +16,68 @@
   "contributes": {
     "commands": [
       {
-        "command": "image-optimizer.optimize",
-        "title": "Optimize"
+        "command": "image-optimizer.compress",
+        "title": "Compress"
+      },
+      {
+        "command": "image-optimizer.convert-to-jpg",
+        "title": "Convert to JPG"
+      },
+      {
+        "command": "image-optimizer.convert-to-webp",
+        "title": "Convert to WEBP"
+      },
+      {
+        "command": "image-optimizer.convert-to-png",
+        "title": "Convert to PNG"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "image-optimizer.optimize",
+          "submenu": "image-optimizer.menus",
           "group": "navigation",
-          "when": "resourceFilename =~ /.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.gif|.*\\.bmp/",
-          "title": "Optimize"
+          "when": "resourceFilename =~ /.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.gif|.*\\.bmp/"
+        }
+      ],
+      "image-optimizer.menus": [
+        {
+          "command": "image-optimizer.compress",
+          "group": "navigation"
+        },
+        {
+          "submenu": "image-optimizer.convert-menus",
+          "group": "navigation"
+        }
+      ],
+      "image-optimizer.convert-menus": [
+        {
+          "command": "image-optimizer.convert-to-png",
+          "group": "navigation",
+          "when": "resourceExtname != .png"
+        },
+        {
+          "command": "image-optimizer.convert-to-jpg",
+          "group": "navigation",
+          "when": "resourceExtname != .jpg && resourceExtname != .jpeg"
+        },
+        {
+          "command": "image-optimizer.convert-to-webp",
+          "group": "navigation",
+          "when": "resourceExtname != .webp"
         }
       ]
     },
+    "submenus": [
+      {
+        "id": "image-optimizer.menus",
+        "label": "Image Optimizer"
+      },
+      {
+        "id": "image-optimizer.convert-menus",
+        "label": "Convert"
+      }
+    ],
     "configuration": {
       "title": "Image Optimizer",
       "properties": {
@@ -72,6 +120,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.1",
     "jimp": "^0.22.12"
   }
 }

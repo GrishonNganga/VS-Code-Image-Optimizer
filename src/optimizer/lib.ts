@@ -1,0 +1,1 @@
+export type SupportedImageTypes = "png" | "jpg" | "webp"
